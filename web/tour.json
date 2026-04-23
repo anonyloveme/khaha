@@ -1,0 +1,3020 @@
+{
+  "version": 2,
+  "default": {
+    "firstNode": "scene_01"
+  },
+  "nodes": [
+    {
+      "id": "scene_01",
+      "name": "Ngã ba keo úc",
+      "thumbnail": "thumbs/scene_01.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_01.jpg",
+        "tileUrl": "../tiles/scene_01/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_20",
+          "name": "Ruộng lúa",
+          "distance_m": 486.7,
+          "bearing_deg": -21.283,
+          "position": {
+            "yaw": 1.942259,
+            "pitch": -0.20944,
+            "textureX": 11651,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_02",
+          "name": "Ngã 3 rừng thông",
+          "distance_m": 547.7,
+          "bearing_deg": -121.75,
+          "position": {
+            "yaw": -2.587459,
+            "pitch": -0.20944,
+            "textureX": 1270,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_21",
+          "name": "Khu dân cư vùng đệm",
+          "distance_m": 606.3,
+          "bearing_deg": 12.348,
+          "position": {
+            "yaw": 1.355279,
+            "pitch": -0.20944,
+            "textureX": 10306,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_02",
+      "name": "Ngã 3 rừng thông",
+      "thumbnail": "thumbs/scene_02.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_02.jpg",
+        "tileUrl": "../tiles/scene_02/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_03",
+          "name": "Ngã 4 KonBrung",
+          "distance_m": 314.0,
+          "bearing_deg": -103.378,
+          "position": {
+            "yaw": -2.908108,
+            "pitch": -0.279253,
+            "textureX": 535,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_01",
+          "name": "Ngã ba keo úc",
+          "distance_m": 547.7,
+          "bearing_deg": 58.249,
+          "position": {
+            "yaw": 0.554152,
+            "pitch": -0.20944,
+            "textureX": 8470,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_20",
+          "name": "Ruộng lúa",
+          "distance_m": 796.0,
+          "bearing_deg": 21.29,
+          "position": {
+            "yaw": 1.199217,
+            "pitch": -0.20944,
+            "textureX": 9948,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_03",
+      "name": "Ngã 4 KonBrung",
+      "thumbnail": "thumbs/scene_03.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_03.jpg",
+        "tileUrl": "../tiles/scene_03/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_02",
+          "name": "Ngã 3 rừng thông",
+          "distance_m": 314.0,
+          "bearing_deg": 76.622,
+          "position": {
+            "yaw": 0.233497,
+            "pitch": -0.279253,
+            "textureX": 7735,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_04",
+          "name": "Ngã 3 vườn thực vật",
+          "distance_m": 656.3,
+          "bearing_deg": -139.651,
+          "position": {
+            "yaw": -2.275026,
+            "pitch": -0.20944,
+            "textureX": 1986,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_04",
+      "name": "Ngã 3 vườn thực vật",
+      "thumbnail": "thumbs/scene_04.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_04.jpg",
+        "tileUrl": "../tiles/scene_04/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_06",
+          "name": "Chòi canh lửa",
+          "distance_m": 451.6,
+          "bearing_deg": -156.386,
+          "position": {
+            "yaw": -1.982942,
+            "pitch": -0.20944,
+            "textureX": 2655,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_05",
+          "name": "Chòi canh lửa (góc 2)",
+          "distance_m": 455.6,
+          "bearing_deg": -155.379,
+          "position": {
+            "yaw": -2.000518,
+            "pitch": -0.20944,
+            "textureX": 2615,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_09",
+          "name": "Suối - Vườn thực vật (góc 2)",
+          "distance_m": 458.9,
+          "bearing_deg": 135.889,
+          "position": {
+            "yaw": -0.800922,
+            "pitch": -0.20944,
+            "textureX": 5364,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_10",
+          "name": "Suối - Vườn thực vật",
+          "distance_m": 459.1,
+          "bearing_deg": 136.089,
+          "position": {
+            "yaw": -0.804413,
+            "pitch": -0.20944,
+            "textureX": 5356,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 636.7,
+          "bearing_deg": 133.447,
+          "position": {
+            "yaw": -0.7583,
+            "pitch": -0.20944,
+            "textureX": 5462,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_03",
+          "name": "Ngã 4 KonBrung",
+          "distance_m": 656.3,
+          "bearing_deg": 40.348,
+          "position": {
+            "yaw": 0.866583,
+            "pitch": -0.20944,
+            "textureX": 9186,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_11",
+          "name": "Ngã 3 rừng thông - VTV (góc 2)",
+          "distance_m": 678.5,
+          "bearing_deg": 127.668,
+          "position": {
+            "yaw": -0.657434,
+            "pitch": -0.20944,
+            "textureX": 5693,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_12",
+          "name": "Ngã 3 rừng thông - VTV",
+          "distance_m": 678.9,
+          "bearing_deg": 127.406,
+          "position": {
+            "yaw": -0.652866,
+            "pitch": -0.20944,
+            "textureX": 5704,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_08",
+          "name": "Mốc tọa độ Quốc gia",
+          "distance_m": 759.7,
+          "bearing_deg": -145.575,
+          "position": {
+            "yaw": -2.171633,
+            "pitch": -0.20944,
+            "textureX": 2223,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_07",
+          "name": "Mốc tọa độ Quốc gia (góc 2)",
+          "distance_m": 760.9,
+          "bearing_deg": -145.377,
+          "position": {
+            "yaw": -2.175087,
+            "pitch": -0.20944,
+            "textureX": 2215,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_05",
+      "name": "Chòi canh lửa (góc 2)",
+      "thumbnail": "thumbs/scene_05.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_05.jpg",
+        "tileUrl": "../tiles/scene_05/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_08",
+          "name": "Mốc tọa độ Quốc gia",
+          "distance_m": 320.3,
+          "bearing_deg": -131.561,
+          "position": {
+            "yaw": -2.416216,
+            "pitch": -0.279253,
+            "textureX": 1662,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_07",
+          "name": "Mốc tọa độ Quốc gia (góc 2)",
+          "distance_m": 322.2,
+          "bearing_deg": -131.16,
+          "position": {
+            "yaw": -2.423213,
+            "pitch": -0.279253,
+            "textureX": 1646,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_04",
+          "name": "Ngã 3 vườn thực vật",
+          "distance_m": 455.6,
+          "bearing_deg": 24.621,
+          "position": {
+            "yaw": 1.141082,
+            "pitch": -0.20944,
+            "textureX": 9815,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_10",
+          "name": "Suối - Vườn thực vật",
+          "distance_m": 515.0,
+          "bearing_deg": 80.678,
+          "position": {
+            "yaw": 0.162691,
+            "pitch": -0.20944,
+            "textureX": 7573,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_09",
+          "name": "Suối - Vườn thực vật (góc 2)",
+          "distance_m": 516.2,
+          "bearing_deg": 80.558,
+          "position": {
+            "yaw": 0.1648,
+            "pitch": -0.20944,
+            "textureX": 7578,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 652.5,
+          "bearing_deg": 92.084,
+          "position": {
+            "yaw": -0.036379,
+            "pitch": -0.20944,
+            "textureX": 7117,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_11",
+          "name": "Ngã 3 rừng thông - VTV (góc 2)",
+          "distance_m": 726.9,
+          "bearing_deg": 90.04,
+          "position": {
+            "yaw": -0.000705,
+            "pitch": -0.20944,
+            "textureX": 7198,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_12",
+          "name": "Ngã 3 rừng thông - VTV",
+          "distance_m": 729.0,
+          "bearing_deg": 89.862,
+          "position": {
+            "yaw": 0.002409,
+            "pitch": -0.20944,
+            "textureX": 7206,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_06",
+      "name": "Chòi canh lửa",
+      "thumbnail": "thumbs/scene_06.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_06.jpg",
+        "tileUrl": "../tiles/scene_06/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_08",
+          "name": "Mốc tọa độ Quốc gia",
+          "distance_m": 327.3,
+          "bearing_deg": -130.576,
+          "position": {
+            "yaw": -2.433416,
+            "pitch": -0.279253,
+            "textureX": 1623,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_07",
+          "name": "Mốc tọa độ Quốc gia (góc 2)",
+          "distance_m": 329.2,
+          "bearing_deg": -130.189,
+          "position": {
+            "yaw": -2.440168,
+            "pitch": -0.279253,
+            "textureX": 1608,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_04",
+          "name": "Ngã 3 vườn thực vật",
+          "distance_m": 451.6,
+          "bearing_deg": 23.614,
+          "position": {
+            "yaw": 1.158658,
+            "pitch": -0.20944,
+            "textureX": 9855,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_10",
+          "name": "Suối - Vườn thực vật",
+          "distance_m": 506.1,
+          "bearing_deg": 80.556,
+          "position": {
+            "yaw": 0.164823,
+            "pitch": -0.20944,
+            "textureX": 7578,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_09",
+          "name": "Suối - Vườn thực vật (góc 2)",
+          "distance_m": 507.3,
+          "bearing_deg": 80.434,
+          "position": {
+            "yaw": 0.166964,
+            "pitch": -0.20944,
+            "textureX": 7583,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 643.6,
+          "bearing_deg": 92.146,
+          "position": {
+            "yaw": -0.037452,
+            "pitch": -0.20944,
+            "textureX": 7114,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_11",
+          "name": "Ngã 3 rừng thông - VTV (góc 2)",
+          "distance_m": 718.0,
+          "bearing_deg": 90.07,
+          "position": {
+            "yaw": -0.001225,
+            "pitch": -0.20944,
+            "textureX": 7197,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_12",
+          "name": "Ngã 3 rừng thông - VTV",
+          "distance_m": 720.1,
+          "bearing_deg": 89.889,
+          "position": {
+            "yaw": 0.001929,
+            "pitch": -0.20944,
+            "textureX": 7204,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_07",
+      "name": "Mốc tọa độ Quốc gia (góc 2)",
+      "thumbnail": "thumbs/scene_07.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_07.jpg",
+        "tileUrl": "../tiles/scene_07/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_05",
+          "name": "Chòi canh lửa (góc 2)",
+          "distance_m": 322.2,
+          "bearing_deg": 48.839,
+          "position": {
+            "yaw": 0.718389,
+            "pitch": -0.279253,
+            "textureX": 8846,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_06",
+          "name": "Chòi canh lửa",
+          "distance_m": 329.2,
+          "bearing_deg": 49.811,
+          "position": {
+            "yaw": 0.701435,
+            "pitch": -0.279253,
+            "textureX": 8808,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_04",
+          "name": "Ngã 3 vườn thực vật",
+          "distance_m": 760.9,
+          "bearing_deg": 34.622,
+          "position": {
+            "yaw": 0.966523,
+            "pitch": -0.20944,
+            "textureX": 9415,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_08",
+      "name": "Mốc tọa độ Quốc gia",
+      "thumbnail": "thumbs/scene_08.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_08.jpg",
+        "tileUrl": "../tiles/scene_08/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_05",
+          "name": "Chòi canh lửa (góc 2)",
+          "distance_m": 320.3,
+          "bearing_deg": 48.438,
+          "position": {
+            "yaw": 0.725386,
+            "pitch": -0.279253,
+            "textureX": 8862,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_06",
+          "name": "Chòi canh lửa",
+          "distance_m": 327.3,
+          "bearing_deg": 49.424,
+          "position": {
+            "yaw": 0.708186,
+            "pitch": -0.279253,
+            "textureX": 8823,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_04",
+          "name": "Ngã 3 vườn thực vật",
+          "distance_m": 759.7,
+          "bearing_deg": 34.424,
+          "position": {
+            "yaw": 0.969977,
+            "pitch": -0.20944,
+            "textureX": 9423,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_09",
+      "name": "Suối - Vườn thực vật (góc 2)",
+      "thumbnail": "thumbs/scene_09.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_09.jpg",
+        "tileUrl": "../tiles/scene_09/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 179.4,
+          "bearing_deg": 127.19,
+          "position": {
+            "yaw": -0.649088,
+            "pitch": -0.349066,
+            "textureX": 5712,
+            "textureY": 4400
+          }
+        },
+        {
+          "nodeId": "scene_11",
+          "name": "Ngã 3 rừng thông - VTV (góc 2)",
+          "distance_m": 233.8,
+          "bearing_deg": 111.37,
+          "position": {
+            "yaw": -0.372984,
+            "pitch": -0.279253,
+            "textureX": 6345,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_12",
+          "name": "Ngã 3 rừng thông - VTV",
+          "distance_m": 235.0,
+          "bearing_deg": 110.666,
+          "position": {
+            "yaw": -0.360682,
+            "pitch": -0.279253,
+            "textureX": 6373,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_16",
+          "name": "Ngã 3 rừng trắc (góc 2)",
+          "distance_m": 404.4,
+          "bearing_deg": 122.95,
+          "position": {
+            "yaw": -0.575088,
+            "pitch": -0.20944,
+            "textureX": 5882,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_17",
+          "name": "Ngã 3 rừng trắc",
+          "distance_m": 415.8,
+          "bearing_deg": 123.434,
+          "position": {
+            "yaw": -0.583542,
+            "pitch": -0.20944,
+            "textureX": 5863,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_04",
+          "name": "Ngã 3 vườn thực vật",
+          "distance_m": 458.9,
+          "bearing_deg": -44.11,
+          "position": {
+            "yaw": 2.340658,
+            "pitch": -0.20944,
+            "textureX": 12564,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_06",
+          "name": "Chòi canh lửa",
+          "distance_m": 507.3,
+          "bearing_deg": -99.565,
+          "position": {
+            "yaw": -2.974649,
+            "pitch": -0.20944,
+            "textureX": 383,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_05",
+          "name": "Chòi canh lửa (góc 2)",
+          "distance_m": 516.2,
+          "bearing_deg": -99.441,
+          "position": {
+            "yaw": -2.976813,
+            "pitch": -0.20944,
+            "textureX": 378,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_15",
+          "name": "Nhà hành chính Trung tâm",
+          "distance_m": 738.8,
+          "bearing_deg": 137.262,
+          "position": {
+            "yaw": -0.824877,
+            "pitch": -0.20944,
+            "textureX": 5310,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_13",
+          "name": "Nhà hành chính (góc 2)",
+          "distance_m": 744.2,
+          "bearing_deg": 136.725,
+          "position": {
+            "yaw": -0.815514,
+            "pitch": -0.20944,
+            "textureX": 5331,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_14",
+          "name": "Nhà hành chính (góc 3)",
+          "distance_m": 744.4,
+          "bearing_deg": 136.763,
+          "position": {
+            "yaw": -0.816165,
+            "pitch": -0.20944,
+            "textureX": 5329,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_26",
+          "name": "Cổng Trung tâm",
+          "distance_m": 753.5,
+          "bearing_deg": 134.783,
+          "position": {
+            "yaw": -0.781617,
+            "pitch": -0.20944,
+            "textureX": 5409,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_24",
+          "name": "Cổng Trung tâm (góc 2)",
+          "distance_m": 753.7,
+          "bearing_deg": 134.807,
+          "position": {
+            "yaw": -0.782032,
+            "pitch": -0.20944,
+            "textureX": 5408,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_25",
+          "name": "Cổng Trung tâm (góc 3)",
+          "distance_m": 755.2,
+          "bearing_deg": 134.803,
+          "position": {
+            "yaw": -0.781956,
+            "pitch": -0.20944,
+            "textureX": 5408,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_10",
+      "name": "Suối - Vườn thực vật",
+      "thumbnail": "thumbs/scene_10.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_10.jpg",
+        "tileUrl": "../tiles/scene_10/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 179.4,
+          "bearing_deg": 126.674,
+          "position": {
+            "yaw": -0.640079,
+            "pitch": -0.349066,
+            "textureX": 5733,
+            "textureY": 4400
+          }
+        },
+        {
+          "nodeId": "scene_11",
+          "name": "Ngã 3 rừng thông - VTV (góc 2)",
+          "distance_m": 234.3,
+          "bearing_deg": 110.992,
+          "position": {
+            "yaw": -0.366385,
+            "pitch": -0.279253,
+            "textureX": 6360,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_12",
+          "name": "Ngã 3 rừng thông - VTV",
+          "distance_m": 235.5,
+          "bearing_deg": 110.291,
+          "position": {
+            "yaw": -0.354142,
+            "pitch": -0.279253,
+            "textureX": 6388,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_16",
+          "name": "Ngã 3 rừng trắc (góc 2)",
+          "distance_m": 404.5,
+          "bearing_deg": 122.722,
+          "position": {
+            "yaw": -0.57111,
+            "pitch": -0.20944,
+            "textureX": 5891,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_17",
+          "name": "Ngã 3 rừng trắc",
+          "distance_m": 416.0,
+          "bearing_deg": 123.213,
+          "position": {
+            "yaw": -0.57967,
+            "pitch": -0.20944,
+            "textureX": 5871,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_04",
+          "name": "Ngã 3 vườn thực vật",
+          "distance_m": 459.1,
+          "bearing_deg": -43.91,
+          "position": {
+            "yaw": 2.337167,
+            "pitch": -0.20944,
+            "textureX": 12556,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_06",
+          "name": "Chòi canh lửa",
+          "distance_m": 506.1,
+          "bearing_deg": -99.443,
+          "position": {
+            "yaw": -2.976789,
+            "pitch": -0.20944,
+            "textureX": 378,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_05",
+          "name": "Chòi canh lửa (góc 2)",
+          "distance_m": 515.0,
+          "bearing_deg": -99.32,
+          "position": {
+            "yaw": -2.978921,
+            "pitch": -0.20944,
+            "textureX": 373,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_15",
+          "name": "Nhà hành chính Trung tâm",
+          "distance_m": 738.6,
+          "bearing_deg": 137.138,
+          "position": {
+            "yaw": -0.822715,
+            "pitch": -0.20944,
+            "textureX": 5314,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_13",
+          "name": "Nhà hành chính (góc 2)",
+          "distance_m": 744.0,
+          "bearing_deg": 136.602,
+          "position": {
+            "yaw": -0.813364,
+            "pitch": -0.20944,
+            "textureX": 5336,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_14",
+          "name": "Nhà hành chính (góc 3)",
+          "distance_m": 744.2,
+          "bearing_deg": 136.64,
+          "position": {
+            "yaw": -0.814016,
+            "pitch": -0.20944,
+            "textureX": 5334,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_26",
+          "name": "Cổng Trung tâm",
+          "distance_m": 753.3,
+          "bearing_deg": 134.661,
+          "position": {
+            "yaw": -0.779485,
+            "pitch": -0.20944,
+            "textureX": 5414,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_24",
+          "name": "Cổng Trung tâm (góc 2)",
+          "distance_m": 753.5,
+          "bearing_deg": 134.685,
+          "position": {
+            "yaw": -0.7799,
+            "pitch": -0.20944,
+            "textureX": 5413,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_25",
+          "name": "Cổng Trung tâm (góc 3)",
+          "distance_m": 755.0,
+          "bearing_deg": 134.681,
+          "position": {
+            "yaw": -0.779828,
+            "pitch": -0.20944,
+            "textureX": 5413,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_11",
+      "name": "Ngã 3 rừng thông - VTV (góc 2)",
+      "thumbnail": "thumbs/scene_11.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_11.jpg",
+        "tileUrl": "../tiles/scene_11/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 78.4,
+          "bearing_deg": -107.234,
+          "position": {
+            "yaw": -2.840796,
+            "pitch": -0.418879,
+            "textureX": 689,
+            "textureY": 4560
+          }
+        },
+        {
+          "nodeId": "scene_16",
+          "name": "Ngã 3 rừng trắc (góc 2)",
+          "distance_m": 181.5,
+          "bearing_deg": 137.938,
+          "position": {
+            "yaw": -0.836672,
+            "pitch": -0.349066,
+            "textureX": 5282,
+            "textureY": 4400
+          }
+        },
+        {
+          "nodeId": "scene_17",
+          "name": "Ngã 3 rừng trắc",
+          "distance_m": 193.4,
+          "bearing_deg": 138.067,
+          "position": {
+            "yaw": -0.838926,
+            "pitch": -0.349066,
+            "textureX": 5277,
+            "textureY": 4400
+          }
+        },
+        {
+          "nodeId": "scene_09",
+          "name": "Suối - Vườn thực vật (góc 2)",
+          "distance_m": 233.8,
+          "bearing_deg": -68.629,
+          "position": {
+            "yaw": 2.7686,
+            "pitch": -0.279253,
+            "textureX": 13545,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_10",
+          "name": "Suối - Vườn thực vật",
+          "distance_m": 234.3,
+          "bearing_deg": -69.007,
+          "position": {
+            "yaw": 2.775199,
+            "pitch": -0.279253,
+            "textureX": 13560,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_15",
+          "name": "Nhà hành chính Trung tâm",
+          "distance_m": 538.3,
+          "bearing_deg": 148.196,
+          "position": {
+            "yaw": -1.015712,
+            "pitch": -0.20944,
+            "textureX": 4872,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_13",
+          "name": "Nhà hành chính (góc 2)",
+          "distance_m": 542.3,
+          "bearing_deg": 147.366,
+          "position": {
+            "yaw": -1.001218,
+            "pitch": -0.20944,
+            "textureX": 4905,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_14",
+          "name": "Nhà hành chính (góc 3)",
+          "distance_m": 542.5,
+          "bearing_deg": 147.412,
+          "position": {
+            "yaw": -1.002034,
+            "pitch": -0.20944,
+            "textureX": 4904,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_26",
+          "name": "Cổng Trung tâm",
+          "distance_m": 546.9,
+          "bearing_deg": 144.564,
+          "position": {
+            "yaw": -0.952317,
+            "pitch": -0.20944,
+            "textureX": 5017,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_24",
+          "name": "Cổng Trung tâm (góc 2)",
+          "distance_m": 547.1,
+          "bearing_deg": 144.593,
+          "position": {
+            "yaw": -0.952831,
+            "pitch": -0.20944,
+            "textureX": 5016,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_25",
+          "name": "Cổng Trung tâm (góc 3)",
+          "distance_m": 548.6,
+          "bearing_deg": 144.561,
+          "position": {
+            "yaw": -0.95227,
+            "pitch": -0.20944,
+            "textureX": 5018,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_04",
+          "name": "Ngã 3 vườn thực vật",
+          "distance_m": 678.5,
+          "bearing_deg": -52.331,
+          "position": {
+            "yaw": 2.484138,
+            "pitch": -0.20944,
+            "textureX": 12893,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_06",
+          "name": "Chòi canh lửa",
+          "distance_m": 718.0,
+          "bearing_deg": -89.928,
+          "position": {
+            "yaw": 3.14034,
+            "pitch": -0.20944,
+            "textureX": 14397,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_05",
+          "name": "Chòi canh lửa (góc 2)",
+          "distance_m": 726.9,
+          "bearing_deg": -89.958,
+          "position": {
+            "yaw": 3.140859,
+            "pitch": -0.20944,
+            "textureX": 14398,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_12",
+      "name": "Ngã 3 rừng thông - VTV",
+      "thumbnail": "thumbs/scene_12.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_12.jpg",
+        "tileUrl": "../tiles/scene_12/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 81.1,
+          "bearing_deg": -108.318,
+          "position": {
+            "yaw": -2.821881,
+            "pitch": -0.418879,
+            "textureX": 733,
+            "textureY": 4560
+          }
+        },
+        {
+          "nodeId": "scene_16",
+          "name": "Ngã 3 rừng trắc (góc 2)",
+          "distance_m": 181.8,
+          "bearing_deg": 138.917,
+          "position": {
+            "yaw": -0.853757,
+            "pitch": -0.349066,
+            "textureX": 5243,
+            "textureY": 4400
+          }
+        },
+        {
+          "nodeId": "scene_17",
+          "name": "Ngã 3 rừng trắc",
+          "distance_m": 193.7,
+          "bearing_deg": 138.985,
+          "position": {
+            "yaw": -0.854953,
+            "pitch": -0.349066,
+            "textureX": 5241,
+            "textureY": 4400
+          }
+        },
+        {
+          "nodeId": "scene_09",
+          "name": "Suối - Vườn thực vật (góc 2)",
+          "distance_m": 235.0,
+          "bearing_deg": -69.334,
+          "position": {
+            "yaw": 2.780902,
+            "pitch": -0.279253,
+            "textureX": 13573,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_10",
+          "name": "Suối - Vườn thực vật",
+          "distance_m": 235.5,
+          "bearing_deg": -69.709,
+          "position": {
+            "yaw": 2.787442,
+            "pitch": -0.279253,
+            "textureX": 13588,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_15",
+          "name": "Nhà hành chính Trung tâm",
+          "distance_m": 539.1,
+          "bearing_deg": 148.516,
+          "position": {
+            "yaw": -1.021296,
+            "pitch": -0.20944,
+            "textureX": 4859,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_13",
+          "name": "Nhà hành chính (góc 2)",
+          "distance_m": 543.0,
+          "bearing_deg": 147.684,
+          "position": {
+            "yaw": -1.006782,
+            "pitch": -0.20944,
+            "textureX": 4893,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_14",
+          "name": "Nhà hành chính (góc 3)",
+          "distance_m": 543.3,
+          "bearing_deg": 147.731,
+          "position": {
+            "yaw": -1.007594,
+            "pitch": -0.20944,
+            "textureX": 4891,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_26",
+          "name": "Cổng Trung tâm",
+          "distance_m": 547.5,
+          "bearing_deg": 144.883,
+          "position": {
+            "yaw": -0.957897,
+            "pitch": -0.20944,
+            "textureX": 5005,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_24",
+          "name": "Cổng Trung tâm (góc 2)",
+          "distance_m": 547.8,
+          "bearing_deg": 144.913,
+          "position": {
+            "yaw": -0.958409,
+            "pitch": -0.20944,
+            "textureX": 5003,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_25",
+          "name": "Cổng Trung tâm (góc 3)",
+          "distance_m": 549.2,
+          "bearing_deg": 144.88,
+          "position": {
+            "yaw": -0.957833,
+            "pitch": -0.20944,
+            "textureX": 5005,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_04",
+          "name": "Ngã 3 vườn thực vật",
+          "distance_m": 678.9,
+          "bearing_deg": -52.592,
+          "position": {
+            "yaw": 2.488705,
+            "pitch": -0.20944,
+            "textureX": 12904,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_06",
+          "name": "Chòi canh lửa",
+          "distance_m": 720.1,
+          "bearing_deg": -90.109,
+          "position": {
+            "yaw": -3.139692,
+            "pitch": -0.20944,
+            "textureX": 4,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_05",
+          "name": "Chòi canh lửa (góc 2)",
+          "distance_m": 729.0,
+          "bearing_deg": -90.136,
+          "position": {
+            "yaw": -3.139212,
+            "pitch": -0.20944,
+            "textureX": 5,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_13",
+      "name": "Nhà hành chính (góc 2)",
+      "thumbnail": "thumbs/scene_13.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_13.jpg",
+        "tileUrl": "../tiles/scene_13/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_24",
+          "name": "Cổng Trung tâm (góc 2)",
+          "distance_m": 26.8,
+          "bearing_deg": 66.421,
+          "position": {
+            "yaw": 0.411525,
+            "pitch": -0.488692,
+            "textureX": 8143,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_26",
+          "name": "Cổng Trung tâm",
+          "distance_m": 27.0,
+          "bearing_deg": 65.865,
+          "position": {
+            "yaw": 0.421239,
+            "pitch": -0.488692,
+            "textureX": 8165,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_25",
+          "name": "Cổng Trung tâm (góc 3)",
+          "distance_m": 27.4,
+          "bearing_deg": 69.249,
+          "position": {
+            "yaw": 0.362179,
+            "pitch": -0.488692,
+            "textureX": 8030,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_17",
+          "name": "Ngã 3 rừng trắc",
+          "distance_m": 352.8,
+          "bearing_deg": -27.55,
+          "position": {
+            "yaw": 2.051641,
+            "pitch": -0.279253,
+            "textureX": 11902,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_16",
+          "name": "Ngã 3 rừng trắc (góc 2)",
+          "distance_m": 364.5,
+          "bearing_deg": -27.955,
+          "position": {
+            "yaw": 2.058707,
+            "pitch": -0.279253,
+            "textureX": 11918,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_11",
+          "name": "Ngã 3 rừng thông - VTV (góc 2)",
+          "distance_m": 542.3,
+          "bearing_deg": -32.634,
+          "position": {
+            "yaw": 2.140363,
+            "pitch": -0.20944,
+            "textureX": 12105,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_12",
+          "name": "Ngã 3 rừng thông - VTV",
+          "distance_m": 543.0,
+          "bearing_deg": -32.315,
+          "position": {
+            "yaw": 2.134799,
+            "pitch": -0.20944,
+            "textureX": 12093,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 568.1,
+          "bearing_deg": -40.276,
+          "position": {
+            "yaw": 2.273737,
+            "pitch": -0.20944,
+            "textureX": 12411,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_10",
+          "name": "Suối - Vườn thực vật",
+          "distance_m": 744.0,
+          "bearing_deg": -43.397,
+          "position": {
+            "yaw": 2.328209,
+            "pitch": -0.20944,
+            "textureX": 12536,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_09",
+          "name": "Suối - Vườn thực vật (góc 2)",
+          "distance_m": 744.2,
+          "bearing_deg": -43.273,
+          "position": {
+            "yaw": 2.326059,
+            "pitch": -0.20944,
+            "textureX": 12531,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_14",
+      "name": "Nhà hành chính (góc 3)",
+      "thumbnail": "thumbs/scene_14.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_14.jpg",
+        "tileUrl": "../tiles/scene_14/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_24",
+          "name": "Cổng Trung tâm (góc 2)",
+          "distance_m": 27.2,
+          "bearing_deg": 65.71,
+          "position": {
+            "yaw": 0.423933,
+            "pitch": -0.488692,
+            "textureX": 8172,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_26",
+          "name": "Cổng Trung tâm",
+          "distance_m": 27.4,
+          "bearing_deg": 65.168,
+          "position": {
+            "yaw": 0.4334,
+            "pitch": -0.488692,
+            "textureX": 8193,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_25",
+          "name": "Cổng Trung tâm (góc 3)",
+          "distance_m": 27.8,
+          "bearing_deg": 68.514,
+          "position": {
+            "yaw": 0.374998,
+            "pitch": -0.488692,
+            "textureX": 8059,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_17",
+          "name": "Ngã 3 rừng trắc",
+          "distance_m": 353.1,
+          "bearing_deg": -27.483,
+          "position": {
+            "yaw": 2.05046,
+            "pitch": -0.279253,
+            "textureX": 11899,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_16",
+          "name": "Ngã 3 rừng trắc (góc 2)",
+          "distance_m": 364.8,
+          "bearing_deg": -27.889,
+          "position": {
+            "yaw": 2.057558,
+            "pitch": -0.279253,
+            "textureX": 11916,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_11",
+          "name": "Ngã 3 rừng thông - VTV (góc 2)",
+          "distance_m": 542.5,
+          "bearing_deg": -32.587,
+          "position": {
+            "yaw": 2.139548,
+            "pitch": -0.20944,
+            "textureX": 12103,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_12",
+          "name": "Ngã 3 rừng thông - VTV",
+          "distance_m": 543.3,
+          "bearing_deg": -32.268,
+          "position": {
+            "yaw": 2.133987,
+            "pitch": -0.20944,
+            "textureX": 12091,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 568.3,
+          "bearing_deg": -40.228,
+          "position": {
+            "yaw": 2.272902,
+            "pitch": -0.20944,
+            "textureX": 12409,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_10",
+          "name": "Suối - Vườn thực vật",
+          "distance_m": 744.2,
+          "bearing_deg": -43.359,
+          "position": {
+            "yaw": 2.327556,
+            "pitch": -0.20944,
+            "textureX": 12534,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_09",
+          "name": "Suối - Vườn thực vật (góc 2)",
+          "distance_m": 744.4,
+          "bearing_deg": -43.236,
+          "position": {
+            "yaw": 2.325407,
+            "pitch": -0.20944,
+            "textureX": 12529,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_15",
+      "name": "Nhà hành chính Trung tâm",
+      "thumbnail": "thumbs/scene_15.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_15.jpg",
+        "tileUrl": "../tiles/scene_15/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_24",
+          "name": "Cổng Trung tâm (góc 2)",
+          "distance_m": 35.3,
+          "bearing_deg": 70.944,
+          "position": {
+            "yaw": 0.332583,
+            "pitch": -0.488692,
+            "textureX": 7962,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_26",
+          "name": "Cổng Trung tâm",
+          "distance_m": 35.5,
+          "bearing_deg": 70.492,
+          "position": {
+            "yaw": 0.340481,
+            "pitch": -0.488692,
+            "textureX": 7980,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_25",
+          "name": "Cổng Trung tâm (góc 3)",
+          "distance_m": 36.0,
+          "bearing_deg": 73.018,
+          "position": {
+            "yaw": 0.296396,
+            "pitch": -0.488692,
+            "textureX": 7879,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_17",
+          "name": "Ngã 3 rừng trắc",
+          "distance_m": 349.5,
+          "bearing_deg": -26.217,
+          "position": {
+            "yaw": 2.028376,
+            "pitch": -0.279253,
+            "textureX": 11849,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_16",
+          "name": "Ngã 3 rừng trắc (góc 2)",
+          "distance_m": 361.1,
+          "bearing_deg": -26.669,
+          "position": {
+            "yaw": 2.036258,
+            "pitch": -0.279253,
+            "textureX": 11867,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_11",
+          "name": "Ngã 3 rừng thông - VTV (góc 2)",
+          "distance_m": 538.3,
+          "bearing_deg": -31.803,
+          "position": {
+            "yaw": 2.12587,
+            "pitch": -0.20944,
+            "textureX": 12072,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_12",
+          "name": "Ngã 3 rừng thông - VTV",
+          "distance_m": 539.1,
+          "bearing_deg": -31.483,
+          "position": {
+            "yaw": 2.120285,
+            "pitch": -0.20944,
+            "textureX": 12059,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 563.1,
+          "bearing_deg": -39.544,
+          "position": {
+            "yaw": 2.260964,
+            "pitch": -0.20944,
+            "textureX": 12382,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_10",
+          "name": "Suối - Vườn thực vật",
+          "distance_m": 738.6,
+          "bearing_deg": -42.861,
+          "position": {
+            "yaw": 2.318858,
+            "pitch": -0.20944,
+            "textureX": 12514,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_09",
+          "name": "Suối - Vườn thực vật (góc 2)",
+          "distance_m": 738.8,
+          "bearing_deg": -42.737,
+          "position": {
+            "yaw": 2.316696,
+            "pitch": -0.20944,
+            "textureX": 12509,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_16",
+      "name": "Ngã 3 rừng trắc (góc 2)",
+      "thumbnail": "thumbs/scene_16.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_16.jpg",
+        "tileUrl": "../tiles/scene_16/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_17",
+          "name": "Ngã 3 rừng trắc",
+          "distance_m": 12.0,
+          "bearing_deg": 140.026,
+          "position": {
+            "yaw": -0.873116,
+            "pitch": -0.488692,
+            "textureX": 5199,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_11",
+          "name": "Ngã 3 rừng thông - VTV (góc 2)",
+          "distance_m": 181.5,
+          "bearing_deg": -42.062,
+          "position": {
+            "yaw": 2.304916,
+            "pitch": -0.349066,
+            "textureX": 12482,
+            "textureY": 4400
+          }
+        },
+        {
+          "nodeId": "scene_12",
+          "name": "Ngã 3 rừng thông - VTV",
+          "distance_m": 181.8,
+          "bearing_deg": -41.083,
+          "position": {
+            "yaw": 2.287831,
+            "pitch": -0.349066,
+            "textureX": 12443,
+            "textureY": 4400
+          }
+        },
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 225.9,
+          "bearing_deg": -60.415,
+          "position": {
+            "yaw": 2.625232,
+            "pitch": -0.279253,
+            "textureX": 13217,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_15",
+          "name": "Nhà hành chính Trung tâm",
+          "distance_m": 361.1,
+          "bearing_deg": 153.331,
+          "position": {
+            "yaw": -1.105328,
+            "pitch": -0.279253,
+            "textureX": 4667,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_13",
+          "name": "Nhà hành chính (góc 2)",
+          "distance_m": 364.5,
+          "bearing_deg": 152.044,
+          "position": {
+            "yaw": -1.082879,
+            "pitch": -0.279253,
+            "textureX": 4718,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_14",
+          "name": "Nhà hành chính (góc 3)",
+          "distance_m": 364.8,
+          "bearing_deg": 152.11,
+          "position": {
+            "yaw": -1.084028,
+            "pitch": -0.279253,
+            "textureX": 4716,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_26",
+          "name": "Cổng Trung tâm",
+          "distance_m": 367.3,
+          "bearing_deg": 147.833,
+          "position": {
+            "yaw": -1.009373,
+            "pitch": -0.279253,
+            "textureX": 4887,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_24",
+          "name": "Cổng Trung tâm (góc 2)",
+          "distance_m": 367.5,
+          "bearing_deg": 147.875,
+          "position": {
+            "yaw": -1.010105,
+            "pitch": -0.279253,
+            "textureX": 4885,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_25",
+          "name": "Cổng Trung tâm (góc 3)",
+          "distance_m": 368.9,
+          "bearing_deg": 147.814,
+          "position": {
+            "yaw": -1.009046,
+            "pitch": -0.279253,
+            "textureX": 4887,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_09",
+          "name": "Suối - Vườn thực vật (góc 2)",
+          "distance_m": 404.4,
+          "bearing_deg": -57.049,
+          "position": {
+            "yaw": 2.566491,
+            "pitch": -0.20944,
+            "textureX": 13082,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_10",
+          "name": "Suối - Vườn thực vật",
+          "distance_m": 404.5,
+          "bearing_deg": -57.277,
+          "position": {
+            "yaw": 2.570469,
+            "pitch": -0.20944,
+            "textureX": 13091,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_17",
+      "name": "Ngã 3 rừng trắc",
+      "thumbnail": "thumbs/scene_17.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_17.jpg",
+        "tileUrl": "../tiles/scene_17/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_16",
+          "name": "Ngã 3 rừng trắc (góc 2)",
+          "distance_m": 12.0,
+          "bearing_deg": -39.974,
+          "position": {
+            "yaw": 2.268476,
+            "pitch": -0.488692,
+            "textureX": 12399,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_11",
+          "name": "Ngã 3 rừng thông - VTV (góc 2)",
+          "distance_m": 193.4,
+          "bearing_deg": -41.933,
+          "position": {
+            "yaw": 2.302661,
+            "pitch": -0.349066,
+            "textureX": 12477,
+            "textureY": 4400
+          }
+        },
+        {
+          "nodeId": "scene_12",
+          "name": "Ngã 3 rừng thông - VTV",
+          "distance_m": 193.7,
+          "bearing_deg": -41.015,
+          "position": {
+            "yaw": 2.286635,
+            "pitch": -0.349066,
+            "textureX": 12441,
+            "textureY": 4400
+          }
+        },
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 237.1,
+          "bearing_deg": -59.404,
+          "position": {
+            "yaw": 2.6076,
+            "pitch": -0.279253,
+            "textureX": 13176,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_15",
+          "name": "Nhà hành chính Trung tâm",
+          "distance_m": 349.5,
+          "bearing_deg": 153.782,
+          "position": {
+            "yaw": -1.11321,
+            "pitch": -0.279253,
+            "textureX": 4649,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_13",
+          "name": "Nhà hành chính (góc 2)",
+          "distance_m": 352.8,
+          "bearing_deg": 152.449,
+          "position": {
+            "yaw": -1.089946,
+            "pitch": -0.279253,
+            "textureX": 4702,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_14",
+          "name": "Nhà hành chính (góc 3)",
+          "distance_m": 353.1,
+          "bearing_deg": 152.517,
+          "position": {
+            "yaw": -1.091126,
+            "pitch": -0.279253,
+            "textureX": 4699,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_26",
+          "name": "Cổng Trung tâm",
+          "distance_m": 355.4,
+          "bearing_deg": 148.095,
+          "position": {
+            "yaw": -1.013948,
+            "pitch": -0.279253,
+            "textureX": 4876,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_24",
+          "name": "Cổng Trung tâm (góc 2)",
+          "distance_m": 355.6,
+          "bearing_deg": 148.138,
+          "position": {
+            "yaw": -1.014702,
+            "pitch": -0.279253,
+            "textureX": 4874,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_25",
+          "name": "Cổng Trung tâm (góc 3)",
+          "distance_m": 357.0,
+          "bearing_deg": 148.074,
+          "position": {
+            "yaw": -1.01359,
+            "pitch": -0.279253,
+            "textureX": 4877,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_09",
+          "name": "Suối - Vườn thực vật (góc 2)",
+          "distance_m": 415.8,
+          "bearing_deg": -56.565,
+          "position": {
+            "yaw": 2.558037,
+            "pitch": -0.20944,
+            "textureX": 13063,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_10",
+          "name": "Suối - Vườn thực vật",
+          "distance_m": 416.0,
+          "bearing_deg": -56.787,
+          "position": {
+            "yaw": 2.561909,
+            "pitch": -0.20944,
+            "textureX": 13071,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_18",
+      "name": "Đỉnh 1032m (góc 2)",
+      "thumbnail": "thumbs/scene_18.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_18.jpg",
+        "tileUrl": "../tiles/scene_18/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_23",
+          "name": "Giọt nước làng",
+          "distance_m": 503.3,
+          "bearing_deg": 61.292,
+          "position": {
+            "yaw": 0.501051,
+            "pitch": -0.20944,
+            "textureX": 8348,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_22",
+          "name": "Giọt nước làng (góc 2)",
+          "distance_m": 504.0,
+          "bearing_deg": 61.347,
+          "position": {
+            "yaw": 0.500082,
+            "pitch": -0.20944,
+            "textureX": 8346,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_19",
+      "name": "Đỉnh 1032m",
+      "thumbnail": "thumbs/scene_19.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_19.jpg",
+        "tileUrl": "../tiles/scene_19/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_23",
+          "name": "Giọt nước làng",
+          "distance_m": 502.8,
+          "bearing_deg": 61.346,
+          "position": {
+            "yaw": 0.500099,
+            "pitch": -0.20944,
+            "textureX": 8346,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_22",
+          "name": "Giọt nước làng (góc 2)",
+          "distance_m": 503.6,
+          "bearing_deg": 61.402,
+          "position": {
+            "yaw": 0.49913,
+            "pitch": -0.20944,
+            "textureX": 8344,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_20",
+      "name": "Ruộng lúa",
+      "thumbnail": "thumbs/scene_20.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_20.jpg",
+        "tileUrl": "../tiles/scene_20/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_21",
+          "name": "Khu dân cư vùng đệm",
+          "distance_m": 336.3,
+          "bearing_deg": 65.628,
+          "position": {
+            "yaw": 0.42537,
+            "pitch": -0.279253,
+            "textureX": 8175,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_01",
+          "name": "Ngã ba keo úc",
+          "distance_m": 486.7,
+          "bearing_deg": 158.716,
+          "position": {
+            "yaw": -1.199326,
+            "pitch": -0.20944,
+            "textureX": 4451,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_02",
+          "name": "Ngã 3 rừng thông",
+          "distance_m": 796.0,
+          "bearing_deg": -158.709,
+          "position": {
+            "yaw": -1.942387,
+            "pitch": -0.20944,
+            "textureX": 2748,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_21",
+      "name": "Khu dân cư vùng đệm",
+      "thumbnail": "thumbs/scene_21.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_21.jpg",
+        "tileUrl": "../tiles/scene_21/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_20",
+          "name": "Ruộng lúa",
+          "distance_m": 336.3,
+          "bearing_deg": -114.371,
+          "position": {
+            "yaw": -2.716234,
+            "pitch": -0.279253,
+            "textureX": 975,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_01",
+          "name": "Ngã ba keo úc",
+          "distance_m": 606.3,
+          "bearing_deg": -167.651,
+          "position": {
+            "yaw": -1.786318,
+            "pitch": -0.20944,
+            "textureX": 3106,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_22",
+      "name": "Giọt nước làng (góc 2)",
+      "thumbnail": "thumbs/scene_22.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_22.jpg",
+        "tileUrl": "../tiles/scene_22/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_19",
+          "name": "Đỉnh 1032m",
+          "distance_m": 503.6,
+          "bearing_deg": -118.597,
+          "position": {
+            "yaw": -2.64248,
+            "pitch": -0.20944,
+            "textureX": 1144,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_18",
+          "name": "Đỉnh 1032m (góc 2)",
+          "distance_m": 504.0,
+          "bearing_deg": -118.652,
+          "position": {
+            "yaw": -2.641528,
+            "pitch": -0.20944,
+            "textureX": 1146,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_28",
+          "name": "Bổ sung 02",
+          "distance_m": 519.3,
+          "bearing_deg": 107.862,
+          "position": {
+            "yaw": -0.311759,
+            "pitch": -0.20944,
+            "textureX": 6486,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_23",
+      "name": "Giọt nước làng",
+      "thumbnail": "thumbs/scene_23.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_23.jpg",
+        "tileUrl": "../tiles/scene_23/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_19",
+          "name": "Đỉnh 1032m",
+          "distance_m": 502.8,
+          "bearing_deg": -118.653,
+          "position": {
+            "yaw": -2.641511,
+            "pitch": -0.20944,
+            "textureX": 1146,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_18",
+          "name": "Đỉnh 1032m (góc 2)",
+          "distance_m": 503.3,
+          "bearing_deg": -118.707,
+          "position": {
+            "yaw": -2.640559,
+            "pitch": -0.20944,
+            "textureX": 1148,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_28",
+          "name": "Bổ sung 02",
+          "distance_m": 520.2,
+          "bearing_deg": 107.839,
+          "position": {
+            "yaw": -0.311353,
+            "pitch": -0.20944,
+            "textureX": 6486,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_24",
+      "name": "Cổng Trung tâm (góc 2)",
+      "thumbnail": "thumbs/scene_24.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_24.jpg",
+        "tileUrl": "../tiles/scene_24/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_13",
+          "name": "Nhà hành chính (góc 2)",
+          "distance_m": 26.8,
+          "bearing_deg": -113.579,
+          "position": {
+            "yaw": -2.730069,
+            "pitch": -0.488692,
+            "textureX": 943,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_14",
+          "name": "Nhà hành chính (góc 3)",
+          "distance_m": 27.2,
+          "bearing_deg": -114.29,
+          "position": {
+            "yaw": -2.71766,
+            "pitch": -0.488692,
+            "textureX": 972,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_15",
+          "name": "Nhà hành chính Trung tâm",
+          "distance_m": 35.3,
+          "bearing_deg": -109.056,
+          "position": {
+            "yaw": -2.809011,
+            "pitch": -0.488692,
+            "textureX": 762,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_17",
+          "name": "Ngã 3 rừng trắc",
+          "distance_m": 355.6,
+          "bearing_deg": -31.861,
+          "position": {
+            "yaw": 2.126884,
+            "pitch": -0.279253,
+            "textureX": 12074,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_16",
+          "name": "Ngã 3 rừng trắc (góc 2)",
+          "distance_m": 367.5,
+          "bearing_deg": -32.125,
+          "position": {
+            "yaw": 2.13148,
+            "pitch": -0.279253,
+            "textureX": 12085,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_11",
+          "name": "Ngã 3 rừng thông - VTV (góc 2)",
+          "distance_m": 547.1,
+          "bearing_deg": -35.406,
+          "position": {
+            "yaw": 2.188749,
+            "pitch": -0.20944,
+            "textureX": 12216,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_12",
+          "name": "Ngã 3 rừng thông - VTV",
+          "distance_m": 547.8,
+          "bearing_deg": -35.087,
+          "position": {
+            "yaw": 2.183172,
+            "pitch": -0.20944,
+            "textureX": 12203,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 576.4,
+          "bearing_deg": -42.828,
+          "position": {
+            "yaw": 2.318282,
+            "pitch": -0.20944,
+            "textureX": 12513,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_10",
+          "name": "Suối - Vườn thực vật",
+          "distance_m": 753.5,
+          "bearing_deg": -45.314,
+          "position": {
+            "yaw": 2.361671,
+            "pitch": -0.20944,
+            "textureX": 12613,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_09",
+          "name": "Suối - Vườn thực vật (góc 2)",
+          "distance_m": 753.7,
+          "bearing_deg": -45.192,
+          "position": {
+            "yaw": 2.35954,
+            "pitch": -0.20944,
+            "textureX": 12608,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_25",
+      "name": "Cổng Trung tâm (góc 3)",
+      "thumbnail": "thumbs/scene_25.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_25.jpg",
+        "tileUrl": "../tiles/scene_25/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_13",
+          "name": "Nhà hành chính (góc 2)",
+          "distance_m": 27.4,
+          "bearing_deg": -110.751,
+          "position": {
+            "yaw": -2.779415,
+            "pitch": -0.488692,
+            "textureX": 830,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_14",
+          "name": "Nhà hành chính (góc 3)",
+          "distance_m": 27.8,
+          "bearing_deg": -111.486,
+          "position": {
+            "yaw": -2.766596,
+            "pitch": -0.488692,
+            "textureX": 859,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_15",
+          "name": "Nhà hành chính Trung tâm",
+          "distance_m": 36.0,
+          "bearing_deg": -106.982,
+          "position": {
+            "yaw": -2.845198,
+            "pitch": -0.488692,
+            "textureX": 679,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_17",
+          "name": "Ngã 3 rừng trắc",
+          "distance_m": 357.0,
+          "bearing_deg": -31.925,
+          "position": {
+            "yaw": 2.127995,
+            "pitch": -0.279253,
+            "textureX": 12077,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_16",
+          "name": "Ngã 3 rừng trắc (góc 2)",
+          "distance_m": 368.9,
+          "bearing_deg": -32.185,
+          "position": {
+            "yaw": 2.132539,
+            "pitch": -0.279253,
+            "textureX": 12087,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_11",
+          "name": "Ngã 3 rừng thông - VTV (góc 2)",
+          "distance_m": 548.6,
+          "bearing_deg": -35.438,
+          "position": {
+            "yaw": 2.189311,
+            "pitch": -0.20944,
+            "textureX": 12218,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_12",
+          "name": "Ngã 3 rừng thông - VTV",
+          "distance_m": 549.2,
+          "bearing_deg": -35.12,
+          "position": {
+            "yaw": 2.183747,
+            "pitch": -0.20944,
+            "textureX": 12205,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 577.9,
+          "bearing_deg": -42.84,
+          "position": {
+            "yaw": 2.318487,
+            "pitch": -0.20944,
+            "textureX": 12514,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_10",
+          "name": "Suối - Vườn thực vật",
+          "distance_m": 755.0,
+          "bearing_deg": -45.318,
+          "position": {
+            "yaw": 2.361744,
+            "pitch": -0.20944,
+            "textureX": 12613,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_09",
+          "name": "Suối - Vườn thực vật (góc 2)",
+          "distance_m": 755.2,
+          "bearing_deg": -45.196,
+          "position": {
+            "yaw": 2.359616,
+            "pitch": -0.20944,
+            "textureX": 12608,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_26",
+      "name": "Cổng Trung tâm",
+      "thumbnail": "thumbs/scene_26.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_26.jpg",
+        "tileUrl": "../tiles/scene_26/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_13",
+          "name": "Nhà hành chính (góc 2)",
+          "distance_m": 27.0,
+          "bearing_deg": -114.135,
+          "position": {
+            "yaw": -2.720354,
+            "pitch": -0.488692,
+            "textureX": 965,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_14",
+          "name": "Nhà hành chính (góc 3)",
+          "distance_m": 27.4,
+          "bearing_deg": -114.832,
+          "position": {
+            "yaw": -2.708193,
+            "pitch": -0.488692,
+            "textureX": 993,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_15",
+          "name": "Nhà hành chính Trung tâm",
+          "distance_m": 35.5,
+          "bearing_deg": -109.508,
+          "position": {
+            "yaw": -2.801113,
+            "pitch": -0.488692,
+            "textureX": 780,
+            "textureY": 4720
+          }
+        },
+        {
+          "nodeId": "scene_17",
+          "name": "Ngã 3 rừng trắc",
+          "distance_m": 355.4,
+          "bearing_deg": -31.905,
+          "position": {
+            "yaw": 2.127637,
+            "pitch": -0.279253,
+            "textureX": 12076,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_16",
+          "name": "Ngã 3 rừng trắc (góc 2)",
+          "distance_m": 367.3,
+          "bearing_deg": -32.167,
+          "position": {
+            "yaw": 2.132212,
+            "pitch": -0.279253,
+            "textureX": 12087,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_11",
+          "name": "Ngã 3 rừng thông - VTV (góc 2)",
+          "distance_m": 546.9,
+          "bearing_deg": -35.436,
+          "position": {
+            "yaw": 2.189263,
+            "pitch": -0.20944,
+            "textureX": 12217,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_12",
+          "name": "Ngã 3 rừng thông - VTV",
+          "distance_m": 547.5,
+          "bearing_deg": -35.116,
+          "position": {
+            "yaw": 2.183683,
+            "pitch": -0.20944,
+            "textureX": 12205,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_30",
+          "name": "Bổ sung 04",
+          "distance_m": 576.2,
+          "bearing_deg": -42.858,
+          "position": {
+            "yaw": 2.318813,
+            "pitch": -0.20944,
+            "textureX": 12514,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_10",
+          "name": "Suối - Vườn thực vật",
+          "distance_m": 753.3,
+          "bearing_deg": -45.338,
+          "position": {
+            "yaw": 2.362087,
+            "pitch": -0.20944,
+            "textureX": 12614,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_09",
+          "name": "Suối - Vườn thực vật (góc 2)",
+          "distance_m": 753.5,
+          "bearing_deg": -45.215,
+          "position": {
+            "yaw": 2.359955,
+            "pitch": -0.20944,
+            "textureX": 12609,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_27",
+      "name": "Bổ sung 01",
+      "thumbnail": "thumbs/scene_27.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_27.jpg",
+        "tileUrl": "../tiles/scene_27/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_29",
+          "name": "Bổ sung 03",
+          "distance_m": 1424.6,
+          "bearing_deg": 153.589,
+          "position": {
+            "yaw": -1.109831,
+            "pitch": -0.174533,
+            "textureX": 4656,
+            "textureY": 4000
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_28",
+      "name": "Bổ sung 02",
+      "thumbnail": "thumbs/scene_28.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_28.jpg",
+        "tileUrl": "../tiles/scene_28/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_22",
+          "name": "Giọt nước làng (góc 2)",
+          "distance_m": 519.3,
+          "bearing_deg": -72.136,
+          "position": {
+            "yaw": 2.829814,
+            "pitch": -0.20944,
+            "textureX": 13685,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_23",
+          "name": "Giọt nước làng",
+          "distance_m": 520.2,
+          "bearing_deg": -72.16,
+          "position": {
+            "yaw": 2.83022,
+            "pitch": -0.20944,
+            "textureX": 13686,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_29",
+          "name": "Bổ sung 03",
+          "distance_m": 546.5,
+          "bearing_deg": 34.785,
+          "position": {
+            "yaw": 0.963676,
+            "pitch": -0.20944,
+            "textureX": 9409,
+            "textureY": 4080
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_29",
+      "name": "Bổ sung 03",
+      "thumbnail": "thumbs/scene_29.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_29.jpg",
+        "tileUrl": "../tiles/scene_29/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_28",
+          "name": "Bổ sung 02",
+          "distance_m": 546.5,
+          "bearing_deg": -145.214,
+          "position": {
+            "yaw": -2.177929,
+            "pitch": -0.20944,
+            "textureX": 2209,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_27",
+          "name": "Bổ sung 01",
+          "distance_m": 1424.6,
+          "bearing_deg": -26.41,
+          "position": {
+            "yaw": 2.031736,
+            "pitch": -0.174533,
+            "textureX": 11856,
+            "textureY": 4000
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_30",
+      "name": "Bổ sung 04",
+      "thumbnail": "thumbs/scene_30.jpg",
+      "panorama": {
+        "width": 14400,
+        "cols": 16,
+        "rows": 8,
+        "baseUrl": "../preview/scene_30.jpg",
+        "tileUrl": "../tiles/scene_30/tile_{col}_{row}.jpg"
+      },
+      "links": [
+        {
+          "nodeId": "scene_11",
+          "name": "Ngã 3 rừng thông - VTV (góc 2)",
+          "distance_m": 78.4,
+          "bearing_deg": 72.765,
+          "position": {
+            "yaw": 0.300799,
+            "pitch": -0.418879,
+            "textureX": 7889,
+            "textureY": 4560
+          }
+        },
+        {
+          "nodeId": "scene_12",
+          "name": "Ngã 3 rừng thông - VTV",
+          "distance_m": 81.1,
+          "bearing_deg": 71.682,
+          "position": {
+            "yaw": 0.319715,
+            "pitch": -0.418879,
+            "textureX": 7933,
+            "textureY": 4560
+          }
+        },
+        {
+          "nodeId": "scene_09",
+          "name": "Suối - Vườn thực vật (góc 2)",
+          "distance_m": 179.4,
+          "bearing_deg": -52.81,
+          "position": {
+            "yaw": 2.492499,
+            "pitch": -0.349066,
+            "textureX": 12912,
+            "textureY": 4400
+          }
+        },
+        {
+          "nodeId": "scene_10",
+          "name": "Suối - Vườn thực vật",
+          "distance_m": 179.4,
+          "bearing_deg": -53.326,
+          "position": {
+            "yaw": 2.501508,
+            "pitch": -0.349066,
+            "textureX": 12933,
+            "textureY": 4400
+          }
+        },
+        {
+          "nodeId": "scene_16",
+          "name": "Ngã 3 rừng trắc (góc 2)",
+          "distance_m": 225.9,
+          "bearing_deg": 119.585,
+          "position": {
+            "yaw": -0.516353,
+            "pitch": -0.279253,
+            "textureX": 6017,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_17",
+          "name": "Ngã 3 rừng trắc",
+          "distance_m": 237.1,
+          "bearing_deg": 120.595,
+          "position": {
+            "yaw": -0.533984,
+            "pitch": -0.279253,
+            "textureX": 5976,
+            "textureY": 4240
+          }
+        },
+        {
+          "nodeId": "scene_15",
+          "name": "Nhà hành chính Trung tâm",
+          "distance_m": 563.1,
+          "bearing_deg": 140.455,
+          "position": {
+            "yaw": -0.880614,
+            "pitch": -0.20944,
+            "textureX": 5182,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_13",
+          "name": "Nhà hành chính (góc 2)",
+          "distance_m": 568.1,
+          "bearing_deg": 139.724,
+          "position": {
+            "yaw": -0.867841,
+            "pitch": -0.20944,
+            "textureX": 5211,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_14",
+          "name": "Nhà hành chính (góc 3)",
+          "distance_m": 568.3,
+          "bearing_deg": 139.771,
+          "position": {
+            "yaw": -0.868676,
+            "pitch": -0.20944,
+            "textureX": 5209,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_26",
+          "name": "Cổng Trung tâm",
+          "distance_m": 576.2,
+          "bearing_deg": 137.141,
+          "position": {
+            "yaw": -0.822765,
+            "pitch": -0.20944,
+            "textureX": 5314,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_24",
+          "name": "Cổng Trung tâm (góc 2)",
+          "distance_m": 576.4,
+          "bearing_deg": 137.171,
+          "position": {
+            "yaw": -0.823296,
+            "pitch": -0.20944,
+            "textureX": 5313,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_25",
+          "name": "Cổng Trung tâm (góc 3)",
+          "distance_m": 577.9,
+          "bearing_deg": 137.16,
+          "position": {
+            "yaw": -0.82309,
+            "pitch": -0.20944,
+            "textureX": 5314,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_04",
+          "name": "Ngã 3 vườn thực vật",
+          "distance_m": 636.7,
+          "bearing_deg": -46.552,
+          "position": {
+            "yaw": 2.383274,
+            "pitch": -0.20944,
+            "textureX": 12662,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_06",
+          "name": "Chòi canh lửa",
+          "distance_m": 643.6,
+          "bearing_deg": -87.853,
+          "position": {
+            "yaw": 3.104115,
+            "pitch": -0.20944,
+            "textureX": 14314,
+            "textureY": 4080
+          }
+        },
+        {
+          "nodeId": "scene_05",
+          "name": "Chòi canh lửa (góc 2)",
+          "distance_m": 652.5,
+          "bearing_deg": -87.914,
+          "position": {
+            "yaw": 3.105188,
+            "pitch": -0.20944,
+            "textureX": 14317,
+            "textureY": 4080
+          }
+        }
+      ]
+    }
+  ]
+}
