@@ -6,6 +6,9 @@ import { GalleryPlugin } from '@photo-sphere-viewer/gallery-plugin';
 import { GyroscopePlugin } from '@photo-sphere-viewer/gyroscope-plugin';
 import { StereoPlugin } from '@photo-sphere-viewer/stereo-plugin';
 
+// THÊM dòng này vào đầu file, cùng block import:
+import { HOTSPOT_OVERRIDES, SCENE_CALIBRATION } from './hotspot-overrides.js';
+
 /**
  * 1) GPS scene data
  */
@@ -40,75 +43,6 @@ const GPS_DATA = {
   scene_28: { lat: 14.0799531, lng: 108.2837240, name: 'Bổ sung 02' },
   scene_29: { lat: 14.0839897, lng: 108.2866149, name: 'Bổ sung 03' },
   scene_30: { lat: 14.0669598, lng: 108.2908468, name: 'Bổ sung 04' },
-};
-
-/**
- * 2) Calibration per scene
- *
- * bearingOffsetDeg:
- *   offset để map bearing GPS -> yaw panorama
- *
- * sphereCorrectionPanDeg:
- *   nếu muốn xoay cả panorama cho đúng "hướng chuẩn"
- *
- * targetYawDeg / targetPitchDeg / targetZoom:
- *   hướng camera "đẹp" sau khi vào scene
- *
- * Bạn có thể tinh chỉnh từng scene dần dần.
- */
-const SCENE_CALIBRATION = {
-  scene_01: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -6, targetZoom: 50 },
-  scene_02: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 8,   targetPitchDeg: -14, targetZoom: 52 },
-  scene_03: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: -12, targetPitchDeg: -12, targetZoom: 52 },
-  scene_04: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -12, targetZoom: 52 },
-  scene_05: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 18,  targetPitchDeg: -18, targetZoom: 54 },
-  scene_06: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 8,   targetPitchDeg: -18, targetZoom: 54 },
-  scene_07: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 15,  targetPitchDeg: -16, targetZoom: 54 },
-  scene_08: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 10,  targetPitchDeg: -16, targetZoom: 54 },
-  scene_09: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -16, targetZoom: 54 },
-  scene_10: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -16, targetZoom: 54 },
-  scene_11: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -15, targetZoom: 54 },
-  scene_12: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -15, targetZoom: 54 },
-  scene_13: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: -6,  targetPitchDeg: -12, targetZoom: 56 },
-  scene_14: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: -8,  targetPitchDeg: -12, targetZoom: 56 },
-  scene_15: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: -10, targetPitchDeg: -12, targetZoom: 56 },
-  scene_16: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 15,  targetPitchDeg: -15, targetZoom: 54 },
-  scene_17: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 12,  targetPitchDeg: -15, targetZoom: 54 },
-  scene_18: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -8,  targetZoom: 50 },
-  scene_19: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -8,  targetZoom: 50 },
-  scene_20: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -10, targetZoom: 50 },
-  scene_21: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -10, targetZoom: 50 },
-  scene_22: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -10, targetZoom: 50 },
-  scene_23: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -10, targetZoom: 50 },
-  scene_24: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: -5,  targetPitchDeg: -12, targetZoom: 56 },
-  scene_25: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: -5,  targetPitchDeg: -12, targetZoom: 56 },
-  scene_26: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: -5,  targetPitchDeg: -12, targetZoom: 56 },
-  scene_27: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -10, targetZoom: 50 },
-  scene_28: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -10, targetZoom: 50 },
-  scene_29: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -10, targetZoom: 50 },
-  scene_30: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -12, targetZoom: 52 },
-};
-
-/**
- * 3) Manual hotspot overrides
- *
- * Chính chỗ này mới giúp tour giống dulichtadung.
- * Nếu có override textureX/textureY => marker sẽ ghim đúng điểm trên ảnh.
- *
- * Ví dụ mẫu:
- *
- * const HOTSPOT_OVERRIDES = {
- *   scene_01: {
- *     scene_02: { textureX: 2800, textureY: 2500 },
- *     scene_20: { textureX: 4300, textureY: 2200 },
- *   },
- *   scene_15: {
- *     scene_24: { textureX: 6200, textureY: 3400 },
- *   }
- * };
- */
-const HOTSPOT_OVERRIDES = {
-  // điền dần theo console log textureX/textureY
 };
 
 /**
