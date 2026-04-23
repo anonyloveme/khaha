@@ -347,22 +347,29 @@ async function initTour() {
 
   async function playLittlePlanetIntro() {
     const focus = getSceneFocus(virtualTour.getCurrentNode());
-    await sleep(300);
+    await sleep(380);
 
     // Use native camera animation for smoother motion, and only tween optical params.
     const cameraAnim = viewer.animate({
       yaw: focus.yaw,
       pitch: focus.pitch,
       zoom: focus.zoom,
-      speed: '6rpm',
+      speed: '2rpm',
       easing: 'inOutSine',
     });
 
-    const opticsTween = tween(1700, t => {
-      const k = easeOutCubic(t);
+    let lastOpticsUpdate = 0;
+    const opticsTween = tween(2400, t => {
+      const now = performance.now();
+      if (now - lastOpticsUpdate < 33 && t < 1) {
+        return;
+      }
+      lastOpticsUpdate = now;
+
+      const k = easeInOutQuad(t);
       viewer.setOptions({
-        fisheye: lerp(2, 0, k),
-        maxFov: lerp(130, 90, k),
+        fisheye: lerp(1.35, 0, k),
+        maxFov: lerp(118, 90, k),
       });
     });
 
