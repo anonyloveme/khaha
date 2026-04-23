@@ -6,23 +6,14 @@ import { GalleryPlugin } from '@photo-sphere-viewer/gallery-plugin';
 import { GyroscopePlugin } from '@photo-sphere-viewer/gyroscope-plugin';
 import { StereoPlugin } from '@photo-sphere-viewer/stereo-plugin';
 
-import {
-  SCENE_CALIBRATION,
-  HOTSPOT_OVERRIDES,
-  getSceneMode,
-  getLinkStyle,
-} from './hotspot-overrides.js';
-
-const DEBUG =
-  location.hostname === 'localhost' ||
-  location.hostname === '127.0.0.1' ||
-  location.search.includes('debug=1');
-
+/**
+ * 1) GPS scene data
+ */
 const GPS_DATA = {
-  scene_01: { lat: 14.078641, lng: 108.2976508, name: 'Ngã ba keo úc' },
-  scene_02: { lat: 14.0760493, lng: 108.293333, name: 'Ngã 3 rừng thông' },
+  scene_01: { lat: 14.078641,  lng: 108.2976508, name: 'Ngã ba keo úc' },
+  scene_02: { lat: 14.0760493, lng: 108.293333,  name: 'Ngã 3 rừng thông' },
   scene_03: { lat: 14.0753959, lng: 108.2905006, name: 'Ngã 4 KonBrung' },
-  scene_04: { lat: 14.0708977, lng: 108.286561, name: 'Ngã 3 vườn thực vật' },
+  scene_04: { lat: 14.0708977, lng: 108.286561,  name: 'Ngã 3 vườn thực vật' },
   scene_05: { lat: 14.0671733, lng: 108.2848014, name: 'Chòi canh lửa (góc 2)' },
   scene_06: { lat: 14.0671766, lng: 108.2848839, name: 'Chòi canh lửa' },
   scene_07: { lat: 14.0652664, lng: 108.2825527, name: 'Mốc tọa độ Quốc gia (góc 2)' },
@@ -51,30 +42,93 @@ const GPS_DATA = {
   scene_30: { lat: 14.0669598, lng: 108.2908468, name: 'Bổ sung 04' },
 };
 
+/**
+ * 2) Calibration per scene
+ *
+ * bearingOffsetDeg:
+ *   offset để map bearing GPS -> yaw panorama
+ *
+ * sphereCorrectionPanDeg:
+ *   nếu muốn xoay cả panorama cho đúng "hướng chuẩn"
+ *
+ * targetYawDeg / targetPitchDeg / targetZoom:
+ *   hướng camera "đẹp" sau khi vào scene
+ *
+ * Bạn có thể tinh chỉnh từng scene dần dần.
+ */
+const SCENE_CALIBRATION = {
+  scene_01: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -6, targetZoom: 50 },
+  scene_02: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 8,   targetPitchDeg: -14, targetZoom: 52 },
+  scene_03: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: -12, targetPitchDeg: -12, targetZoom: 52 },
+  scene_04: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -12, targetZoom: 52 },
+  scene_05: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 18,  targetPitchDeg: -18, targetZoom: 54 },
+  scene_06: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 8,   targetPitchDeg: -18, targetZoom: 54 },
+  scene_07: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 15,  targetPitchDeg: -16, targetZoom: 54 },
+  scene_08: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 10,  targetPitchDeg: -16, targetZoom: 54 },
+  scene_09: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -16, targetZoom: 54 },
+  scene_10: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -16, targetZoom: 54 },
+  scene_11: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -15, targetZoom: 54 },
+  scene_12: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -15, targetZoom: 54 },
+  scene_13: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: -6,  targetPitchDeg: -12, targetZoom: 56 },
+  scene_14: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: -8,  targetPitchDeg: -12, targetZoom: 56 },
+  scene_15: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: -10, targetPitchDeg: -12, targetZoom: 56 },
+  scene_16: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 15,  targetPitchDeg: -15, targetZoom: 54 },
+  scene_17: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 12,  targetPitchDeg: -15, targetZoom: 54 },
+  scene_18: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -8,  targetZoom: 50 },
+  scene_19: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -8,  targetZoom: 50 },
+  scene_20: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -10, targetZoom: 50 },
+  scene_21: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -10, targetZoom: 50 },
+  scene_22: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -10, targetZoom: 50 },
+  scene_23: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -10, targetZoom: 50 },
+  scene_24: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: -5,  targetPitchDeg: -12, targetZoom: 56 },
+  scene_25: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: -5,  targetPitchDeg: -12, targetZoom: 56 },
+  scene_26: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: -5,  targetPitchDeg: -12, targetZoom: 56 },
+  scene_27: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -10, targetZoom: 50 },
+  scene_28: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -10, targetZoom: 50 },
+  scene_29: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -10, targetZoom: 50 },
+  scene_30: { bearingOffsetDeg: 0, sphereCorrectionPanDeg: 0, targetYawDeg: 0,   targetPitchDeg: -12, targetZoom: 52 },
+};
+
+/**
+ * 3) Manual hotspot overrides
+ *
+ * Chính chỗ này mới giúp tour giống dulichtadung.
+ * Nếu có override textureX/textureY => marker sẽ ghim đúng điểm trên ảnh.
+ *
+ * Ví dụ mẫu:
+ *
+ * const HOTSPOT_OVERRIDES = {
+ *   scene_01: {
+ *     scene_02: { textureX: 2800, textureY: 2500 },
+ *     scene_20: { textureX: 4300, textureY: 2200 },
+ *   },
+ *   scene_15: {
+ *     scene_24: { textureX: 6200, textureY: 3400 },
+ *   }
+ * };
+ */
+const HOTSPOT_OVERRIDES = {
+  // điền dần theo console log textureX/textureY
+};
+
+/**
+ * 4) Utils
+ */
 const TWO_PI = Math.PI * 2;
 
 function degToRad(deg) {
   return deg * Math.PI / 180;
 }
 
-function guessPitchByDistance(distanceM = 500) {
-  if (distanceM < 40) return degToRad(-28);
-  if (distanceM < 100) return degToRad(-24);
-  if (distanceM < 200) return degToRad(-20);
-  if (distanceM < 400) return degToRad(-16);
-  if (distanceM < 800) return degToRad(-12);
-  return degToRad(-10);
-}
-
-function bearingDegToYaw(bearingDeg) {
-  return normalizeRad((Math.PI / 2) - degToRad(bearingDeg));
+function radToDeg(rad) {
+  return rad * 180 / Math.PI;
 }
 
 function normalizeRad(rad) {
-  let value = rad;
-  while (value <= -Math.PI) value += TWO_PI;
-  while (value > Math.PI) value -= TWO_PI;
-  return value;
+  let r = rad;
+  while (r <= -Math.PI) r += TWO_PI;
+  while (r > Math.PI) r -= TWO_PI;
+  return r;
 }
 
 function shortestArc(from, to) {
@@ -90,7 +144,7 @@ function lerpAngle(a, b, t) {
 }
 
 function easeInOutQuad(t) {
-  return t < 0.5 ? 2 * t * t : 1 - ((-2 * t + 2) ** 2) / 2;
+  return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
 }
 
 function sleep(ms) {
@@ -98,7 +152,7 @@ function sleep(ms) {
 }
 
 function escapeHtml(str = '') {
-  return String(str)
+  return str
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
@@ -106,15 +160,31 @@ function escapeHtml(str = '') {
     .replaceAll("'", '&#039;');
 }
 
-function sphericalToTexture(yaw, pitch, panoWidth, panoHeight) {
-  const nYaw = normalizeRad(yaw);
-  let textureX = ((nYaw + Math.PI) / TWO_PI) * panoWidth;
+function haversine(lat1, lng1, lat2, lng2) {
+  const R = 6371000;
+  const p1 = degToRad(lat1);
+  const p2 = degToRad(lat2);
+  const dp = degToRad(lat2 - lat1);
+  const dl = degToRad(lng2 - lng1);
 
-  if (textureX < 0) textureX += panoWidth;
-  if (textureX > panoWidth) textureX -= panoWidth;
+  const a =
+    Math.sin(dp / 2) ** 2 +
+    Math.cos(p1) * Math.cos(p2) * Math.sin(dl / 2) ** 2;
 
-  const textureY = ((Math.PI / 2 - pitch) / Math.PI) * panoHeight;
-  return { textureX, textureY };
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function bearingRad(lat1, lng1, lat2, lng2) {
+  const p1 = degToRad(lat1);
+  const p2 = degToRad(lat2);
+  const dl = degToRad(lng2 - lng1);
+
+  const y = Math.sin(dl) * Math.cos(p2);
+  const x =
+    Math.cos(p1) * Math.sin(p2) -
+    Math.sin(p1) * Math.cos(p2) * Math.cos(dl);
+
+  return Math.atan2(y, x);
 }
 
 function textureToSpherical(textureX, textureY, panoWidth, panoHeight) {
@@ -123,27 +193,56 @@ function textureToSpherical(textureX, textureY, panoWidth, panoHeight) {
   return { yaw: normalizeRad(yaw), pitch };
 }
 
-function getSceneName(sceneId, fallbackName) {
-  return GPS_DATA[sceneId]?.name || fallbackName || sceneId;
+function sphericalToTexture(yaw, pitch, panoWidth, panoHeight) {
+  const nYaw = normalizeRad(yaw);
+  let textureX = ((nYaw + Math.PI) / TWO_PI) * panoWidth;
+  if (textureX < 0) textureX += panoWidth;
+  if (textureX > panoWidth) textureX -= panoWidth;
+
+  const textureY = ((Math.PI / 2 - pitch) / Math.PI) * panoHeight;
+  return { textureX, textureY };
 }
 
-function getSceneFocus(sceneId) {
-  const cal = SCENE_CALIBRATION[sceneId] || {};
-  return {
-    yaw: degToRad(cal.targetYawDeg ?? 0),
-    pitch: degToRad(cal.targetPitchDeg ?? -12),
-    zoom: cal.targetZoom ?? 52,
-  };
+function guessPitchByDistance(distanceMeters) {
+  if (distanceMeters < 40) return degToRad(-28);
+  if (distanceMeters < 100) return degToRad(-24);
+  if (distanceMeters < 200) return degToRad(-20);
+  if (distanceMeters < 400) return degToRad(-16);
+  if (distanceMeters < 800) return degToRad(-12);
+  return degToRad(-10);
 }
 
-function tween(duration, onTick) {
+function gpsBearingToYaw(fromSceneId, bearing) {
+  const cal = SCENE_CALIBRATION[fromSceneId] || {};
+  const offset = degToRad(cal.bearingOffsetDeg || 0);
+
+  /**
+   * Công thức thực chiến:
+   * - bearing là hướng địa lý A -> B
+   * - offset dùng để hiệu chỉnh panorama
+   *
+   * Nếu marker lệch trái/phải đồng loạt:
+   * chỉnh bearingOffsetDeg của scene đó
+   */
+  return normalizeRad((Math.PI / 2) - bearing + offset);
+}
+
+function createThumbHotspotHtml(targetId, targetName) {
+  const safeName = escapeHtml(targetName || targetId);
+  return `
+    <div class="thumb-hotspot" data-node-id="${escapeHtml(targetId)}" title="${safeName}">
+      <img src="thumbs/${escapeHtml(targetId)}.jpg" alt="${safeName}" />
+    </div>
+  `;
+}
+
+async function tween(duration, onTick) {
   const start = performance.now();
 
   return new Promise(resolve => {
     function frame(now) {
       const t = Math.min(1, (now - start) / duration);
       onTick(t);
-
       if (t < 1) requestAnimationFrame(frame);
       else resolve();
     }
@@ -152,115 +251,82 @@ function tween(duration, onTick) {
   });
 }
 
-function createThumbMarkerHtml(targetId, targetName) {
-  const safeId = escapeHtml(targetId);
-  const safeName = escapeHtml(targetName);
-
-  return `
-    <button
-      class="tour-marker tour-marker--thumb"
-      type="button"
-      data-node-id="${safeId}"
-      aria-label="${safeName}"
-      title="${safeName}"
-    >
-      <img src="thumbs/${safeId}.jpg" alt="${safeName}" loading="lazy" />
-    </button>
-  `;
-}
-
-function createArrowMarkerHtml(targetId, targetName, variant = 'forward') {
-  const safeId = escapeHtml(targetId);
-  const safeName = escapeHtml(targetName);
-  const safeVariant = escapeHtml(variant);
-
-  return `
-    <button
-      class="tour-marker tour-marker--arrow is-${safeVariant}"
-      type="button"
-      data-node-id="${safeId}"
-      aria-label="${safeName}"
-      title="${safeName}"
-    >
-      <span class="tour-marker__arrow-core">
-        <span class="tour-marker__arrow-shaft"></span>
-        <span class="tour-marker__arrow-head"></span>
-      </span>
-    </button>
-  `;
-}
-
-function getArrowVariant(sceneId, markerYaw) {
-  const focus = getSceneFocus(sceneId);
-  const delta = shortestArc(focus.yaw, markerYaw);
-  const threshold = degToRad(22);
-
-  if (Math.abs(delta) <= threshold) return 'forward';
-  return delta < 0 ? 'left' : 'right';
-}
-
-function resolveLinkPlacement(rawNode, link) {
-  const panoWidth = rawNode.panorama.width;
+/**
+ * 5) Resolve marker/link position
+ * Priority:
+ *   A. HOTSPOT_OVERRIDES (textureX/textureY)
+ *   B. tour.json link.position or link.yaw/pitch if available
+ *   C. fallback from GPS bearing
+ */
+function resolveLinkPosition(fromNode, link) {
+  const panoWidth = fromNode.panorama.width;
   const panoHeight = panoWidth / 2;
 
-  const override = HOTSPOT_OVERRIDES[rawNode.id]?.[link.nodeId];
-  const style = getLinkStyle(rawNode.id, link.nodeId);
-
+  const override = HOTSPOT_OVERRIDES[fromNode.id]?.[link.nodeId];
   if (override?.textureX != null && override?.textureY != null) {
-    const pos = textureToSpherical(
-      override.textureX,
-      override.textureY,
-      panoWidth,
-      panoHeight
-    );
-
+    const pos = textureToSpherical(override.textureX, override.textureY, panoWidth, panoHeight);
     return {
       yaw: pos.yaw,
       pitch: pos.pitch,
       textureX: override.textureX,
       textureY: override.textureY,
       source: 'override',
-      style,
-      label: override.label,
     };
   }
 
   if (link.position?.textureX != null && link.position?.textureY != null) {
-    const pos = textureToSpherical(
-      link.position.textureX,
-      link.position.textureY,
-      panoWidth,
-      panoHeight
-    );
-
+    const pos = textureToSpherical(link.position.textureX, link.position.textureY, panoWidth, panoHeight);
     return {
       yaw: pos.yaw,
       pitch: pos.pitch,
       textureX: link.position.textureX,
       textureY: link.position.textureY,
       source: 'tour-json-texture',
-      style,
-      label: override?.label,
     };
   }
 
   if (typeof link.position?.yaw === 'number' && typeof link.position?.pitch === 'number') {
     const tex = sphericalToTexture(link.position.yaw, link.position.pitch, panoWidth, panoHeight);
-
     return {
       yaw: link.position.yaw,
       pitch: link.position.pitch,
       textureX: tex.textureX,
       textureY: tex.textureY,
-      source: 'tour-json-yaw-pitch',
-      style,
-      label: override?.label,
+      source: 'tour-json-position',
     };
   }
 
-  if (typeof link.bearing_deg === 'number') {
-    const yaw = bearingDegToYaw(link.bearing_deg);
-    const pitch = guessPitchByDistance(link.distance_m);
+  if (typeof link.yaw === 'number' && typeof link.pitch === 'number') {
+    const tex = sphericalToTexture(link.yaw, link.pitch, panoWidth, panoHeight);
+    return {
+      yaw: link.yaw,
+      pitch: link.pitch,
+      textureX: tex.textureX,
+      textureY: tex.textureY,
+      source: 'tour-json-yaw-pitch',
+    };
+  }
+
+  if (typeof link.yaw === 'number') {
+    const pitch = typeof link.pitch === 'number' ? link.pitch : degToRad(-14);
+    const tex = sphericalToTexture(link.yaw, pitch, panoWidth, panoHeight);
+    return {
+      yaw: link.yaw,
+      pitch,
+      textureX: tex.textureX,
+      textureY: tex.textureY,
+      source: 'tour-json-yaw-only',
+    };
+  }
+
+  const gA = GPS_DATA[fromNode.id];
+  const gB = GPS_DATA[link.nodeId];
+
+  if (gA && gB) {
+    const dist = haversine(gA.lat, gA.lng, gB.lat, gB.lng);
+    const bearing = bearingRad(gA.lat, gA.lng, gB.lat, gB.lng);
+    const yaw = gpsBearingToYaw(fromNode.id, bearing);
+    const pitch = guessPitchByDistance(dist);
     const tex = sphericalToTexture(yaw, pitch, panoWidth, panoHeight);
 
     return {
@@ -268,9 +334,7 @@ function resolveLinkPlacement(rawNode, link) {
       pitch,
       textureX: tex.textureX,
       textureY: tex.textureY,
-      source: 'gps-bearing-fallback',
-      style,
-      label: override?.label,
+      source: 'gps-fallback',
     };
   }
 
@@ -280,24 +344,30 @@ function resolveLinkPlacement(rawNode, link) {
     textureX: panoWidth / 2,
     textureY: panoHeight * 0.62,
     source: 'default-fallback',
-    style,
-    label: override?.label,
   };
 }
 
+/**
+ * 6) Build nodes for VirtualTourPlugin
+ * IMPORTANT:
+ * - dùng manual mode
+ * - ẩn arrow mặc định
+ * - marker click sẽ đổi scene
+ */
 function buildPreparedNode(rawNode) {
-  const sceneId = rawNode.id;
-  const cal = SCENE_CALIBRATION[sceneId] || {};
-  const sceneName = getSceneName(sceneId, rawNode.name);
+  const gps = GPS_DATA[rawNode.id];
+  const cal = SCENE_CALIBRATION[rawNode.id] || {};
+  const panoWidth = rawNode.panorama.width;
+  const panoHeight = panoWidth / 2;
 
   const links = (rawNode.links || [])
-    .filter(link => link.nodeId !== sceneId)
+    .filter(link => link.nodeId !== rawNode.id)
     .map(link => {
-      const pos = resolveLinkPlacement(rawNode, link);
+      const pos = resolveLinkPosition(rawNode, link);
 
       return {
         nodeId: link.nodeId,
-        name: getSceneName(link.nodeId, link.name),
+        name: GPS_DATA[link.nodeId]?.name || link.name || link.nodeId,
         position: {
           yaw: pos.yaw,
           pitch: pos.pitch,
@@ -306,10 +376,10 @@ function buildPreparedNode(rawNode) {
     });
 
   return {
-    id: sceneId,
-    name: sceneName,
-    caption: sceneName,
-    thumbnail: `thumbs/${sceneId}.jpg`,
+    id: rawNode.id,
+    name: gps?.name || rawNode.name || rawNode.id,
+    caption: gps?.name || rawNode.name || rawNode.id,
+    thumbnail: `thumbs/${rawNode.id}.jpg`,
     panorama: {
       width: rawNode.panorama.width,
       cols: rawNode.panorama.cols,
@@ -325,34 +395,32 @@ function buildPreparedNode(rawNode) {
       : undefined,
     links,
     data: {
-      mode: getSceneMode(sceneId),
+      focusYaw: degToRad(cal.targetYawDeg ?? 0),
+      focusPitch: degToRad(cal.targetPitchDeg ?? -12),
+      focusZoom: cal.targetZoom ?? 50,
+      panoWidth,
+      panoHeight,
     },
   };
 }
 
 function buildSceneMarkers(rawNode) {
-  const sceneId = rawNode.id;
   const panoWidth = rawNode.panorama.width;
   const panoHeight = panoWidth / 2;
 
   return (rawNode.links || [])
-    .filter(link => link.nodeId !== sceneId)
+    .filter(link => link.nodeId !== rawNode.id)
     .map(link => {
-      const placement = resolveLinkPlacement(rawNode, link);
-      const targetName = placement.label || getSceneName(link.nodeId, link.name);
-
-      const html =
-        placement.style === 'thumb'
-          ? createThumbMarkerHtml(link.nodeId, targetName)
-          : createArrowMarkerHtml(link.nodeId, targetName, getArrowVariant(sceneId, placement.yaw));
+      const targetName = GPS_DATA[link.nodeId]?.name || link.name || link.nodeId;
+      const pos = resolveLinkPosition(rawNode, link);
 
       return {
-        id: `marker_${sceneId}_${link.nodeId}`,
+        id: `marker_${rawNode.id}_${link.nodeId}`,
         position: {
-          yaw: placement.yaw,
-          pitch: placement.pitch,
+          yaw: pos.yaw,
+          pitch: pos.pitch,
         },
-        html,
+        html: createThumbHotspotHtml(link.nodeId, targetName),
         anchor: 'center center',
         tooltip: {
           content: targetName,
@@ -360,11 +428,9 @@ function buildSceneMarkers(rawNode) {
         },
         data: {
           nodeId: link.nodeId,
-          sceneId,
-          style: placement.style,
-          source: placement.source,
-          textureX: Math.round(placement.textureX),
-          textureY: Math.round(placement.textureY),
+          source: pos.source,
+          textureX: Math.round(pos.textureX),
+          textureY: Math.round(pos.textureY),
           panoWidth,
           panoHeight,
         },
@@ -372,32 +438,35 @@ function buildSceneMarkers(rawNode) {
     });
 }
 
+function getSceneFocus(preparedNode) {
+  const fallback = {
+    yaw: 0,
+    pitch: degToRad(-12),
+    zoom: 50,
+  };
+
+  if (!preparedNode) return fallback;
+
+  return {
+    yaw: preparedNode.data?.focusYaw ?? fallback.yaw,
+    pitch: preparedNode.data?.focusPitch ?? fallback.pitch,
+    zoom: preparedNode.data?.focusZoom ?? fallback.zoom,
+  };
+}
+
+/**
+ * 7) Init
+ */
 async function initTour() {
-  const viewerEl = document.getElementById('viewer');
-  const loadingOverlay = document.getElementById('loading-overlay');
-  const captionEl = document.getElementById('scene-caption');
-  const galleryToggleEl = document.getElementById('gallery-toggle');
-  const topLogoImg = document.querySelector('#top-logo img');
-
-  if (!viewerEl || !loadingOverlay || !captionEl || !galleryToggleEl) {
-    throw new Error('Thiếu phần tử HTML bắt buộc: #viewer, #loading-overlay, #scene-caption hoặc #gallery-toggle');
-  }
-
-  const response = await fetch('tour.json', { cache: 'no-cache' });
-
-  if (!response.ok) {
-    throw new Error(`Không tải được tour.json: HTTP ${response.status}`);
-  }
-
+  const response = await fetch('tour.json');
   const tourData = await response.json();
-  if (!Array.isArray(tourData.nodes) || tourData.nodes.length === 0) {
-    throw new Error('tour.json không có scene hợp lệ trong mảng nodes');
-  }
-  const rawNodeMap = new Map((tourData.nodes || []).map(node => [node.id, node]));
-  const preparedNodes = (tourData.nodes || []).map(buildPreparedNode);
+
+  const rawNodeMap = new Map(tourData.nodes.map(node => [node.id, node]));
+  const preparedNodes = tourData.nodes.map(buildPreparedNode);
+  const preparedNodeMap = new Map(preparedNodes.map(node => [node.id, node]));
 
   const viewer = new Viewer({
-    container: viewerEl,
+    container: document.getElementById('viewer'),
     adapter: EquirectangularTilesAdapter,
 
     loadingTxt: '',
@@ -450,62 +519,33 @@ async function initTour() {
   const markers = viewer.getPlugin(MarkersPlugin);
   const gallery = viewer.getPlugin(GalleryPlugin);
 
+  const loadingOverlay = document.getElementById('loading-overlay');
+  const captionEl = document.getElementById('scene-caption');
+  const galleryToggleEl = document.getElementById('gallery-toggle');
+
   let introPlayed = false;
-  let isAnimatingSceneFocus = false;
-  let firstPanoramaLoaded = false;
-
-  const loadingTimeout = setTimeout(() => {
-    if (firstPanoramaLoaded) return;
-    if (loadingOverlay) {
-      loadingOverlay.classList.remove('hidden');
-      loadingOverlay.innerHTML = `
-        <div class="loading-logo" style="color:#ffd27a">Mạng chậm hoặc panorama tải lâu</div>
-        <div class="loading-subtitle">Đang thử tải lại scene đầu tiên...</div>
-      `;
-    }
-  }, 15000);
-
-  const hideLoadingOverlay = () => {
-    if (firstPanoramaLoaded) return;
-    firstPanoramaLoaded = true;
-    clearTimeout(loadingTimeout);
-    if (loadingOverlay) {
-      loadingOverlay.classList.add('hidden');
-    }
-  };
-
-  if (topLogoImg) {
-    topLogoImg.addEventListener('error', () => {
-      topLogoImg.src = 'thumbs/scene_01.jpg';
-    }, { once: true });
-  }
-
-  function updateCaption(sceneId, rawName) {
-    const name = getSceneName(sceneId, rawName);
-    captionEl.textContent = name;
-    captionEl.title = name;
-    document.title = `${name} | Virtual Tour 360° - Vườn Quốc Gia`;
-  }
+  let isSwitchingFocus = false;
 
   function updateGalleryButton() {
-    const visible = gallery.isVisible();
-    galleryToggleEl.classList.toggle('active', visible);
-    galleryToggleEl.setAttribute('aria-pressed', String(visible));
+    galleryToggleEl.classList.toggle('active', gallery.isVisible());
   }
 
-  function renderMarkers(sceneId) {
+  function renderMarkersForScene(sceneId) {
     const rawNode = rawNodeMap.get(sceneId);
     if (!rawNode) return;
-    markers.setMarkers(buildSceneMarkers(rawNode));
+
+    const sceneMarkers = buildSceneMarkers(rawNode);
+    markers.setMarkers(sceneMarkers);
   }
 
   async function animateToSceneFocus(sceneId) {
-    if (isAnimatingSceneFocus) return;
-    isAnimatingSceneFocus = true;
+    if (isSwitchingFocus) return;
 
-    const focus = getSceneFocus(sceneId);
+    const preparedNode = preparedNodeMap.get(sceneId);
+    const focus = getSceneFocus(preparedNode);
 
     try {
+      isSwitchingFocus = true;
       await viewer.animate({
         yaw: focus.yaw,
         pitch: focus.pitch,
@@ -513,18 +553,17 @@ async function initTour() {
         speed: '10rpm',
         easing: 'inOutQuad',
       });
-    } catch (error) {
-      // ignore interrupted animation
+    } catch (err) {
+      // ignore cancelled animation
     } finally {
-      isAnimatingSceneFocus = false;
+      isSwitchingFocus = false;
     }
   }
 
   async function playLittlePlanetIntro() {
     const currentNode = virtualTour.getCurrentNode();
-    if (!currentNode) return;
+    const focus = getSceneFocus(currentNode);
 
-    const focus = getSceneFocus(currentNode.id);
     await sleep(800);
 
     const startState = {
@@ -573,14 +612,16 @@ async function initTour() {
     }
   });
 
-  virtualTour.addEventListener('node-changed', ({ node }) => {
-    updateCaption(node.id, node.name);
-    renderMarkers(node.id);
+  virtualTour.addEventListener('node-changed', async ({ node }) => {
+    captionEl.textContent = GPS_DATA[node.id]?.name || node.name || node.id;
 
-    if (typeof gallery.setCurrentItem === 'function') {
-      gallery.setCurrentItem(node.id);
-    }
+    renderMarkersForScene(node.id);
 
+    /**
+     * Sau mỗi lần đổi scene:
+     * - cập nhật marker mới
+     * - nếu không phải lần intro đầu tiên, camera quay nhẹ về hướng đẹp
+     */
     if (introPlayed) {
       setTimeout(() => {
         animateToSceneFocus(node.id);
@@ -598,11 +639,12 @@ async function initTour() {
 
   viewer.addEventListener('ready', async () => {
     const currentNode = virtualTour.getCurrentNode();
-
     if (currentNode) {
-      updateCaption(currentNode.id, currentNode.name);
-      renderMarkers(currentNode.id);
+      captionEl.textContent = GPS_DATA[currentNode.id]?.name || currentNode.name || currentNode.id;
+      renderMarkersForScene(currentNode.id);
     }
+
+    loadingOverlay.classList.add('hidden');
 
     if (!introPlayed) {
       introPlayed = true;
@@ -610,64 +652,29 @@ async function initTour() {
     }
   });
 
-  viewer.addEventListener('panorama-loaded', () => {
-    hideLoadingOverlay();
+  /**
+   * Click debug:
+   * dùng để lấy textureX / textureY thật trên scene hiện tại
+   * rồi copy vào HOTSPOT_OVERRIDES
+   */
+  viewer.addEventListener('click', ({ data }) => {
+    const currentNode = virtualTour.getCurrentNode();
+    if (!currentNode || data.rightclick) return;
+
+    const rawNode = rawNodeMap.get(currentNode.id);
+    const panoWidth = rawNode?.panorama?.width || 14400;
+    const panoHeight = panoWidth / 2;
+
+    const tex = sphericalToTexture(data.yaw, data.pitch, panoWidth, panoHeight);
+
+    console.log(
+      `[${currentNode.id}] textureX=${Math.round(tex.textureX)}, textureY=${Math.round(tex.textureY)}, yaw=${data.yaw.toFixed(4)}, pitch=${data.pitch.toFixed(4)}`
+    );
   });
-
-  viewer.addEventListener('panorama-error', ({ error }) => {
-    clearTimeout(loadingTimeout);
-    if (loadingOverlay) {
-      loadingOverlay.classList.remove('hidden');
-      loadingOverlay.innerHTML = `
-        <div class="loading-logo" style="color:#ff8686">Không thể tải panorama</div>
-        <div class="loading-subtitle">${escapeHtml(error?.message || 'Hãy kiểm tra đường dẫn preview/tiles')}</div>
-      `;
-    }
-  });
-
-  if (DEBUG) {
-    viewer.addEventListener('click', ({ data }) => {
-      if (!data || data.rightclick) return;
-
-      const currentNode = virtualTour.getCurrentNode();
-      if (!currentNode) return;
-
-      const rawNode = rawNodeMap.get(currentNode.id);
-      const panoWidth = rawNode?.panorama?.width || 14400;
-      const panoHeight = panoWidth / 2;
-
-      const tex = sphericalToTexture(data.yaw, data.pitch, panoWidth, panoHeight);
-
-      console.log(
-        `[${currentNode.id}] textureX=${Math.round(tex.textureX)}, textureY=${Math.round(tex.textureY)}, yaw=${data.yaw.toFixed(4)}, pitch=${data.pitch.toFixed(4)}`
-      );
-    });
-
-    window.__tourDebug = {
-      copyOverride(fromSceneId, toSceneId, textureX, textureY, style = getLinkStyle(fromSceneId, toSceneId)) {
-        const snippet =
-`${fromSceneId}: {
-  ${toSceneId}: { textureX: ${Math.round(textureX)}, textureY: ${Math.round(textureY)}, style: '${style}' },
-},`;
-        console.log(snippet);
-        return snippet;
-      },
-      getSceneMode,
-    };
-  }
 
   updateGalleryButton();
 }
 
-initTour().catch(error => {
-  console.error('❌ Lỗi khởi tạo tour:', error);
-
-  const loadingOverlay = document.getElementById('loading-overlay');
-  if (loadingOverlay) {
-    loadingOverlay.classList.remove('hidden');
-    loadingOverlay.innerHTML = `
-      <div class="loading-logo" style="color:#ff8686">Không thể tải Virtual Tour</div>
-      <div class="loading-subtitle">${escapeHtml(error.message || 'Lỗi không xác định')}</div>
-    `;
-  }
+initTour().catch(err => {
+  console.error('❌ Lỗi khởi tạo tour:', err);
 });
